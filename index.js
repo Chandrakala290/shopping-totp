@@ -934,6 +934,22 @@ window.addEventListener('DOMContentLoaded', () => {
           // showToast('Authentication successful!', 'success');
           resetPaymentForm();
         }
+          else{
+            document.getElementById('storeSelectionPage').classList.add('hidden')
+          document.getElementById('shopSection').classList.add('hidden');
+          document.getElementById('paymentSection').classList.add('hidden');
+          document.getElementById('failed-section').classList.add('hidden')
+          document.getElementById('device-info').classList.add('hidden');
+          document.getElementById('riskscore-info').classList.add('hidden');
+
+          document.getElementById('otpSection').classList.add('hidden');
+          document.getElementById('success-section').classList.add('hidden');
+          document.getElementById('oob-container').classList.add('hidden');
+          document.getElementById('oob-failed').classList.remove('hidden');
+          document.getElementById('captcha-section').classList.add('hidden');
+          document.getElementById('challenge-section').classList.add('hidden');
+          resetPaymentForm();
+          }
         // else if (response.status === 'SAR' && response.stepupAuthType === 'OOB') {
         //   const stepupOobPayload = {
         //     tranId: tranId,
@@ -990,10 +1006,10 @@ window.addEventListener('DOMContentLoaded', () => {
         //     });
 
         // }
-        else {
-          hideLoader()
-          showToast(response.message, 'error');
-        }
+        // else {
+        //   hideLoader()
+        //   showToast(response.message, 'error');
+        // }
       })
   }
   // window.validateOobSar =function (){
@@ -1062,3 +1078,4 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
