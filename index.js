@@ -884,7 +884,6 @@ window.addEventListener('DOMContentLoaded', () => {
   //     })
   // }
   window.submitOtp = function () {
-    showLoader();
     const token = document.getElementById('otpInput').value;
     // const validationURL = mfaInfo.detail.validationURL;
     // const keyName = mfaInfo.detail.keyName;
@@ -915,7 +914,6 @@ window.addEventListener('DOMContentLoaded', () => {
       body: otpPayload.toString()
     }).then(res => res.json())
       .then(response => {
-        hideLoader();
         // if (response.message === 'Authentication success') {
         if (response.status === 'validation success') {
           // document.getElementById('paidAmount').textContent = '$' + totalAmount;
@@ -1060,6 +1058,7 @@ window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => container.removeChild(toast), 500);
     }, 3000);
   };
+
 
 
 });
