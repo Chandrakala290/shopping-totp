@@ -1010,7 +1010,22 @@ window.addEventListener('DOMContentLoaded', () => {
         //   hideLoader()
         //   showToast(response.message, 'error');
         // }
-      })
+      }).catch(err => {
+       document.getElementById('storeSelectionPage').classList.add('hidden')
+          document.getElementById('shopSection').classList.add('hidden');
+          document.getElementById('paymentSection').classList.add('hidden');
+          document.getElementById('failed-section').classList.add('hidden')
+          document.getElementById('device-info').classList.add('hidden');
+          document.getElementById('riskscore-info').classList.add('hidden');
+
+          document.getElementById('otpSection').classList.add('hidden');
+          document.getElementById('success-section').classList.add('hidden');
+          document.getElementById('oob-container').classList.add('hidden');
+          document.getElementById('oob-failed').classList.remove('hidden');
+          document.getElementById('captcha-section').classList.add('hidden');
+          document.getElementById('challenge-section').classList.add('hidden'); 
+  console.error('Fetch error:', err);
+});
   }
   // window.validateOobSar =function (){
   //   return new Promise((resolve) => {
@@ -1078,4 +1093,5 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 
