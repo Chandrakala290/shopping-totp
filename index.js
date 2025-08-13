@@ -887,7 +887,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const token = document.getElementById('otpInput').value;
     // const validationURL = mfaInfo.detail.validationURL;
     // const keyName = mfaInfo.detail.keyName;
-    const otpApiUrl = ' https://40.76.139.12:8440/mfa/totp/validate'
+    const otpApiUrl = ' http://40.76.139.12:8440/mfa/totp/validate'
     const otpPayload = new URLSearchParams({
       username: cardNumber,
       otp: token
@@ -1093,6 +1093,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 
 
 
