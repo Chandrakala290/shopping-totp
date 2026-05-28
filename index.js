@@ -360,7 +360,7 @@ window.addEventListener("DOMContentLoaded", () => {
     };
     console.log(payload);
     // const apiUrl = "https://frm-demo.appsteer.io/services/mobile/external/triggerAPI/089d39ac-1923-4c47-a587-2ac0f1e08f51"
-    const apiUrl = "https://52.249.216.56:8444 /mfa/ruleEngine/validateriskScore";
+    const apiUrl = "https://52.249.216.56:8444/mfa/ruleEngine/validateriskScore";
     fetch(apiUrl, {
       method: "POST",
       headers: {
