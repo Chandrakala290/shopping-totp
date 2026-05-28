@@ -360,7 +360,7 @@ window.addEventListener("DOMContentLoaded", () => {
     };
     console.log(payload);
     // const apiUrl = "https://frm-demo.appsteer.io/services/mobile/external/triggerAPI/089d39ac-1923-4c47-a587-2ac0f1e08f51"
-    const apiUrl = "http://52.249.216.56:8087/mfa/ruleEngine/validateriskScore";
+    const apiUrl = "https://52.249.216.56:8444 /mfa/ruleEngine/validateriskScore";
     fetch(apiUrl, {
       method: "POST",
       headers: {
@@ -393,7 +393,7 @@ window.addEventListener("DOMContentLoaded", () => {
           const cardName = document.getElementById("cardName").value.trim();
           // const token = localStorage.getItem('tokenId');
           // const apiUrl = " https://frm-demo.appsteer.io/services/mfa/otp/generate?connectionUUID=1add4ff8-45b1-47c2-bfe6-456571222e73"
-          const apiUrl = `http://52.249.216.56:8088/services/mfa/totp/getUrl?username=${cardName}`;
+          const apiUrl = `https://52.249.216.56:8445/services/mfa/totp/getUrl?username=${cardName}`;
           console.log(apiUrl);
           fetch(apiUrl, {
             method: "GET",
@@ -428,7 +428,7 @@ window.addEventListener("DOMContentLoaded", () => {
           document.getElementById("captcha-section").classList.add("hidden");
           document.getElementById("challenge-section").classList.add("hidden");
         } else if (response?.authType === "CAPTCHA") {
-          const apiUrl = "http://52.249.216.56:8085/mfa/captcha/generate";
+          const apiUrl = "https://52.249.216.56:8443/mfa/captcha/generate";
           // const apiUrl = "https://frm-demo.appsteer.io/services/mobile/external/triggerAPI/9aa509ed-20f1-4ef8-92a2-f4078b3434f8"
           const payload = {
             beneficiaryName: "Hrusikesh",
@@ -657,7 +657,7 @@ window.addEventListener("DOMContentLoaded", () => {
   window.validateCaptcha = function () {
     showLoader();
     // const apiurl = "https://frm-demo.appsteer.io/services/mobile/external/triggerAPI/c2cb3af9-67c0-4928-a4e3-18f59694ca01"
-    const apiurl = "http://52.249.216.56:8085/mfa/captcha/validate";
+    const apiurl = "https://52.249.216.56:8443/mfa/captcha/validate";
     const userCaptchaValue = document.getElementById("captchaInput").value.trim();
     const payload = {
       beneficiaryName: "Hrusikesh",
@@ -902,7 +902,7 @@ window.addEventListener("DOMContentLoaded", () => {
     //   token : token,
     // }
     const cardName = document.getElementById("cardName").value.trim();
-    const otpApiUrl = `http://52.249.216.56:8088/services/mfa/totp/validate?otp=${token}&username=${cardName}`;
+    const otpApiUrl = `https://52.249.216.56:8445/services/mfa/totp/validate?otp=${token}&username=${cardName}`;
     fetch(otpApiUrl, {
       method: "POST",
       headers: {
