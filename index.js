@@ -359,14 +359,14 @@ window.addEventListener("DOMContentLoaded", () => {
       riskScore: deviceInfo.riskScore,
     };
     console.log(payload);
-    const apiUrl = "https://frm-demo.appsteer.io/services/mobile/external/triggerAPI/c162abc6-7e20-44f1-82d5-49aba18ae3ec"
+    const apiUrl = "https://fis-demo.appsteer.io/mfa/ruleEngine/validateriskScore"
     // const apiUrl = "https://52.249.216.56:8444/mfa/ruleEngine/validateriskScore";
     fetch(apiUrl, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        // "x-api-key": "C3AB8FF13720E8AD9047DD39466B3C8974E592C2FA383D4A3960714CAEF0C4F2",
-        'X-AUTH-TOKEN': '77a68bb2-9c45-4860-89f8-4cefcb3d1cf2' 
+        "x-api-key": "C3AB8FF13720E8AD9047DD39466B3C8974E592C2FA383D4A3960714CAEF0C4F2",
+        // 'X-AUTH-TOKEN': '77a68bb2-9c45-4860-89f8-4cefcb3d1cf2' 
       },
       body: JSON.stringify(payload),
     })
