@@ -362,7 +362,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const apiUrl = "https://fis-demo.appsteer.io/mfa/ruleEngine/validateriskScore"
     // const apiUrl = "https://52.249.216.56:8444/mfa/ruleEngine/validateriskScore";
     fetch(apiUrl, {
-      method: "PUT",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
         "x-api-key": "C3AB8FF13720E8AD9047DD39466B3C8974E592C2FA383D4A3960714CAEF0C4F2",
