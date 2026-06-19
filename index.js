@@ -428,7 +428,7 @@ window.addEventListener("DOMContentLoaded", () => {
           document.getElementById("captcha-section").classList.add("hidden");
           document.getElementById("challenge-section").classList.add("hidden");
         } else if (response?.authType === "CAPTCHA") {
-          const apiUrl = "https://fis-demo.appsteer.io3/mfa/captcha/generate";
+          const apiUrl = "https://fis-demo.appsteer.io/mfa/captcha/generate";
           // const apiUrl = "https://frm-demo.appsteer.io/services/mobile/external/triggerAPI/9aa509ed-20f1-4ef8-92a2-f4078b3434f8"
           const payload = {
             beneficiaryName: "Hrusikesh",
