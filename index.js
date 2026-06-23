@@ -547,7 +547,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("challenge-section").classList.add("hidden");
               }
             });
-        }else{
+        }else if(response?.authType === "NA"){
           window.open("https://citizenkyc.sandbox.appsteer.io/user/#/u/application/add-data/89c6011c-8454-440d-96ae-d672f7d9c595/5","_blank")
         }
         // tranId = response.tranId;
