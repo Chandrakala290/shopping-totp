@@ -548,7 +548,7 @@ window.addEventListener("DOMContentLoaded", () => {
               }
             });
         }else if(response?.authType === "NA"){
-          window.open("https://citizenkyc.sandbox.appsteer.io/user/#/u/application/add-data/89c6011c-8454-440d-96ae-d672f7d9c595/5","_blank")
+         window.location.href = "https://citizenkyc.sandbox.appsteer.io/user/#/u/application/add-data/89c6011c-8454-440d-96ae-d672f7d9c595/5";
         }
         // tranId = response.tranId;
         // authType = response.authType;
