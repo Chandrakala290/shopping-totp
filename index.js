@@ -488,7 +488,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("challenge-section").classList.add("hidden");
               }
             });
-        } else if (response?.data[0]?.message === "SQA") {
+        } else if(response?.authType === "NA"){
+         window.location.href = "https://citizenkyc.sandbox.appsteer.io/user/#/u/application/add-data/89c6011c-8454-440d-96ae-d672f7d9c595/5";
+        }else if (response?.data[0]?.message === "SQA") {
           const apiUrl =
             "https://frm-demo.appsteer.io/services/mobile/external/triggerAPI/864221b3-ea8a-4ce3-b0a4-750c7a08e0bc";
           const payload = {
@@ -547,8 +549,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("challenge-section").classList.add("hidden");
               }
             });
-        }else if(response?.authType === "NA"){
-         window.location.href = "https://citizenkyc.sandbox.appsteer.io/user/#/u/application/add-data/89c6011c-8454-440d-96ae-d672f7d9c595/5";
         }
         // tranId = response.tranId;
         // authType = response.authType;
